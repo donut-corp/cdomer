@@ -5,6 +5,10 @@ edition = "2021"
 authors = ["Lil"]
 description = "CDOMER - linguagem C-family com tipagem estatica e inferencia, transpila para C"
 license = "MIT"
+repository = "https://github.com/donut-corp/cdomer"
+readme = "README.md"
+keywords = ["compiler", "language", "transpiler", "c", "programming-language"]
+categories = ["compilers", "command-line-utilities"]
 
 [[bin]]
 name = "cdomer"
