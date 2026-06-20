@@ -1,0 +1,15 @@
+fn soma(arr: int[]) -> int {
+    let total = 0;
+    let i = 0;
+    while (i < arr.len) {
+        total += arr[i];
+        i += 1;
+    }
+    return total;
+}
+
+fn main() {
+    let numeros = [1, 2, 3, 4, 5];
+    let s = soma(numeros);
+    print("soma =", s);
+}
