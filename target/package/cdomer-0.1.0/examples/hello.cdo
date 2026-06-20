@@ -1,0 +1,6 @@
+fn main() {
+    let nome: string = "Lil";
+    let idade = 25;
+    let pi = 3.14;
+    print("Ola,", nome, "! Voce tem", idade, "anos. Pi eh", pi);
+}
