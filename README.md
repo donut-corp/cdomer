@@ -18,10 +18,10 @@ CDOMER (.cdo) -> [lexer] -> [parser] -> [type checker] -> [codegen C] -> gcc -> 
 
 ---
 
-## Instalação (Termux / Android)
+## Instalação (Debian/Apt) 
 
 ```bash
-pkg install rust clang
+sudo apt install rust clang
 cd cdomer
 cargo build --release
 # binário fica em target/release/cdomer
