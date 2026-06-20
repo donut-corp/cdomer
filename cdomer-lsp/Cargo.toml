@@ -1,0 +1,17 @@
+[package]
+name = "cdomer-lsp"
+version = "0.1.0"
+edition = "2021"
+authors = ["donut-corp"]
+license = "MIT"
+description = "Language Server Protocol (LSP) para a linguagem CDOMER -- autocomplete, diagnosticos e hover em tempo real"
+
+[[bin]]
+name = "cdomer-lsp"
+path = "src/main.rs"
+
+[dependencies]
+tower-lsp = "0.20"
+tokio = { version = "1", features = ["full"] }
+dashmap = "5"
+serde_json = "1"

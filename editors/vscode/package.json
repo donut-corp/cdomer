@@ -1,0 +1,53 @@
+{
+  "name": "cdomer-lang",
+  "displayName": "CDOMER Language Support",
+  "description": "Syntax highlighting, autocomplete e diagnosticos em tempo real para a linguagem CDOMER",
+  "version": "0.1.0",
+  "publisher": "donut-corp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donut-corp/cdomer"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": ["Programming Languages"],
+  "main": "./client/extension.js",
+  "activationEvents": [
+    "onLanguage:cdomer"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cdomer",
+        "aliases": ["CDOMER", "cdomer"],
+        "extensions": [".cdo"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cdomer",
+        "scopeName": "source.cdomer",
+        "path": "./syntaxes/cdomer.tmLanguage.json"
+      }
+    ],
+    "configuration": {
+      "title": "CDOMER",
+      "properties": {
+        "cdomer.lsp.path": {
+          "type": "string",
+          "default": "cdomer-lsp",
+          "description": "Caminho para o binario cdomer-lsp. Por padrao espera que esteja no PATH."
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0"
+  }
+}
