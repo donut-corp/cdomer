@@ -15,7 +15,8 @@
   "categories": ["Programming Languages"],
   "main": "./client/extension.js",
   "activationEvents": [
-    "onLanguage:cdomer"
+    "onLanguage:cdomer",
+    "onCommand:cdomer.run"
   ],
   "contributes": {
     "languages": [
@@ -40,8 +41,36 @@
           "type": "string",
           "default": "cdomer-lsp",
           "description": "Caminho para o binario cdomer-lsp. Por padrao espera que esteja no PATH."
+        },
+        "cdomer.compiler.path": {
+          "type": "string",
+          "default": "cdomer",
+          "description": "Caminho para o binario cdomer (compilador). Por padrao espera que esteja no PATH."
         }
       }
+    },
+    "commands": [
+      {
+        "command": "cdomer.run",
+        "title": "CDOMER: Run",
+        "icon": "$(play)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "cdomer.run",
+          "when": "resourceLangId == cdomer",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "cdomer.run",
+          "when": "resourceLangId == cdomer",
+          "group": "navigation"
+        }
+      ]
     }
   },
   "dependencies": {
