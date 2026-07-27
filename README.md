@@ -4,6 +4,8 @@ Linguagem de programação **C-family**, com **tipagem estática + inferência d
 cujo compilador (escrito em **Rust**) transpila o código CDOMER para **C11** e
 em seguida invoca o `gcc`/`clang` para gerar um binário nativo.
 
+Feito com C e inspirado em domer (.dom) feito por @pedruodevrs
+
 ```
 CDOMER (.cdo) -> [lexer] -> [parser] -> [type checker] -> [codegen C] -> gcc -> binário nativo
 ```
@@ -14,11 +16,10 @@ CDOMER (.cdo) -> [lexer] -> [parser] -> [type checker] -> [codegen C] -> gcc -> 
 - Tipagem estática (erros pegos em tempo de compilação), mas com `let` inferindo
   o tipo quando você não quer escrever (`let x = 10;` já sabe que é `int`).
 - Compila pra C de verdade — roda em qualquer lugar que tenha `gcc`/`clang`,
-  inclusive Termux no Android, sem dependências externas em runtime.
 
 ---
 
-## Instalação (Debian/Apt) 
+## Instalação (Debian/Ubuntu) 
 
 ```bash
 sudo apt install rust clang
